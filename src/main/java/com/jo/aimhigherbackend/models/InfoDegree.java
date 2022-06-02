@@ -21,6 +21,16 @@ public class InfoDegree {
     @Size(max = 25)
     private String date;
 
+    public InfoDegree() {
+    }
+
+    public InfoDegree(Long id, UserInfo userInfo, String name, String date) {
+        this.id = id;
+        this.userInfo = userInfo;
+        this.name = name;
+        this.date = date;
+    }
+
     public Long getId() {
         return id;
     }

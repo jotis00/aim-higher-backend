@@ -23,6 +23,12 @@ public class BlogComment {
     @JoinColumn(name = "blog_post_id")
     private BlogPost blogPost;
 
+    public BlogComment() {}
+    public BlogComment(BlogPost blogPost, String username, String content){
+        this.blogPost = blogPost;
+        this.username = username;
+        this.content = content;
+    }
 
     private Long likes;
 

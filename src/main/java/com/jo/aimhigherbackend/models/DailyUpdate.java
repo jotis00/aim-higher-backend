@@ -38,6 +38,28 @@ public class DailyUpdate {
     @Size(max = 280)
     private String notes;
 
+//    public DailyUpdate() {}
+//    public DailyUpdate()
+
+
+    public DailyUpdate() {
+    }
+
+    public DailyUpdate(Long id, User user, String meals, String water, boolean meditation, float sleep, float workHours, float workRevenue, float friendInteraction, float familyInteraction, Boolean intimacy, String notes) {
+        this.id = id;
+        this.user = user;
+        this.meals = meals;
+        this.water = water;
+        this.meditation = meditation;
+        this.sleep = sleep;
+        this.workHours = workHours;
+        this.workRevenue = workRevenue;
+        this.friendInteraction = friendInteraction;
+        this.familyInteraction = familyInteraction;
+        this.intimacy = intimacy;
+        this.notes = notes;
+    }
+
     public Long getId() {
         return id;
     }

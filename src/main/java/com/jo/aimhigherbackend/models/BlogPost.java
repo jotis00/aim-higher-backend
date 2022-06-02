@@ -43,6 +43,18 @@ public class BlogPost {
     @OneToMany
     private Set<BlogComment> blogPostComments = new HashSet<>();
 
+    public BlogPost() {}
+    public BlogPost(User user, String username, String flair, String content, String date, Boolean userExplorePost, Boolean explorePost) {
+        this.user = user;
+        this.username = username;
+        this.flair = flair;
+        this.content = content;
+        this.date = date;
+        this.userExplorePost = userExplorePost;
+        this.explorePost = explorePost;
+    }
+
+
     private Long likes;
 
     public Long getId() {
@@ -115,5 +127,13 @@ public class BlogPost {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

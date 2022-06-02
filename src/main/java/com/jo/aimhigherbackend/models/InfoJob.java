@@ -28,6 +28,17 @@ public class InfoJob {
     @Size(max = 20)
     private String duration;
 
+    public InfoJob() {
+    }
+
+    public InfoJob(Long id, UserInfo userInfo, String title, String industry, String duration) {
+        this.id = id;
+        this.userInfo = userInfo;
+        this.title = title;
+        this.industry = industry;
+        this.duration = duration;
+    }
+
     public UserInfo getUserInfo() {
         return userInfo;
     }

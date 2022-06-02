@@ -39,6 +39,19 @@ public class UserInfo {
     @OneToMany
     private Set<InfoAward> userAwards = new HashSet<>();
 
+    public UserInfo() {
+    }
+
+    public UserInfo(Long id, Integer age, String height, float weight, float hsGpa, Integer act, Integer sat, float cgGPA) {
+        this.id = id;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.hsGpa = hsGpa;
+        this.act = act;
+        this.sat = sat;
+        this.cgGPA = cgGPA;
+    }
 
     public Long getId() {
         return id;

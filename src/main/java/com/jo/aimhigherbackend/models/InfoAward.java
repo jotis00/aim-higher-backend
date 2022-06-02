@@ -16,6 +16,15 @@ public class InfoAward {
 
     private String name;
 
+    public InfoAward() {
+    }
+
+    public InfoAward(Long id, UserInfo userInfo, String name) {
+        this.id = id;
+        this.userInfo = userInfo;
+        this.name = name;
+    }
+
     public UserInfo getUserInfo() {
         return userInfo;
     }

@@ -1,5 +1,7 @@
 package com.jo.aimhigherbackend.models;
 
+import org.hibernate.annotations.SortComparator;
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
@@ -16,10 +18,21 @@ public class User {
     @Size(max = 20)
     private String username;
 
+    @Size(max = 100)
+    private String password;
+
     @Size(max = 40)
     private String email;
 
     private Boolean subscriptionStatus;
+
+    public User() {}
+    public User(String username, String email, String password, Boolean subscriptionStatus) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.subscriptionStatus = subscriptionStatus;
+    }
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(	name = "user_roles",
@@ -102,5 +115,13 @@ public class User {
 
     public void setUserInfo(UserInfo userInfo) {
         this.userInfo = userInfo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

@@ -23,6 +23,15 @@ public class InfoService {
     @NotBlank
     private float duration;
 
+    public InfoService() {
+    }
+
+    public InfoService(Long id, UserInfo userInfo, String name, float duration) {
+        this.id = id;
+        this.userInfo = userInfo;
+        this.name = name;
+        this.duration = duration;
+    }
 
     public Long getId() {
         return id;

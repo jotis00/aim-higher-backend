@@ -27,11 +27,10 @@ public class User {
     private Boolean subscriptionStatus;
 
     public User() {}
-    public User(String username, String email, String password, Boolean subscriptionStatus) {
+    public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.subscriptionStatus = subscriptionStatus;
     }
 
     @ManyToMany(fetch = FetchType.LAZY)

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/blog")
 public class BlogPostController {
     //BlogPost
-    //get
+    //get user post
     //create
     //update
     //delete

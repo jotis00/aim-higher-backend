@@ -30,10 +30,10 @@ public class UserController {
     }
     //update
     @PutMapping("/updatesubstatus/{subStatus}")
-    public String updateSubscriptionStatus(@Valid @PathVariable Boolean subStaus) {
+    public Boolean updateSubscriptionStatus(@Valid @PathVariable Boolean subStatus) {
 
         //get current logged in user
-        return "Subscription successfully changed";
+        return subStatus;
     }
     //delete user
     @DeleteMapping("/delete")
